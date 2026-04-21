@@ -386,6 +386,14 @@ img {
   color: #d6d0c4;
   border-color: rgba(214,208,196,0.3);
 }
+.credit_txt {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  color: #7d7d86;
+  line-height: 1.7;
+}
 /* responsive */
 @media (max-width: 1200px) {
   .visual_tit {
