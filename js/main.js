@@ -158,8 +158,10 @@
       }
 
       tabs.forEach(function (tab, index) {
+        // 사파리는 버튼을 클릭해도 포커스를 주지 않아서, 클릭한 탭에 직접 포커스를 줌
+        // (그래야 클릭 뒤에 바로 화살표 키로 이어서 넘길 수 있음)
         tab.addEventListener("click", function () {
-          select(tab, false);
+          select(tab, true);
         });
 
         tab.addEventListener("keydown", function (event) {

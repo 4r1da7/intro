@@ -1126,7 +1126,6 @@ html:not(.js) .render_bar {
 .tab_list {
   display: flex;
   gap: 4px;
-  overflow-x: auto;
   border-bottom: 1px solid var(--c_line);
 }
 
@@ -1155,7 +1154,7 @@ html:not(.js) .render_bar {
   padding-top: 20px;
 }
 
-/* 탭에 포커스가 있을 때만 보이는 키보드 안내 (터치 화면인 모바일에서는 숨김) */
+/* 키보드로 탭에 들어왔을 때만 보이는 안내 (터치 화면인 모바일에서는 숨김) */
 .project_view {
   position: relative;
 }
@@ -1173,7 +1172,8 @@ html:not(.js) .render_bar {
   transition: opacity 0.2s;
 }
 
-.tab_list:focus-within + .tab_hint {
+/* 키보드로 들어왔을 때만 표시 (마우스 클릭으로는 표시하지 않음) */
+.tab_list:has(:focus-visible) + .tab_hint {
   opacity: 1;
 }
 
