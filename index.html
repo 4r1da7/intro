@@ -320,7 +320,7 @@ $origin.find(<span class="c_str">"label[for]"</span>).each(<span class="c_key">f
         <p class="sec_tag" aria-hidden="true">&lt;<span class="c_tag">section</span> <span class="c_attr">id</span>=<span class="c_str">"projects"</span>&gt;</p>
         <div class="sec_body">
           <h2 class="sec_tit" id="projects_tit">프로젝트</h2>
-          <p class="sec_desc">두 프로젝트 모두 실제 브랜드 사이트를 분석해 기획, 디자인, 퍼블리싱까지 혼자 진행한 리디자인입니다. 화면 탭은 키보드 ← → 키로도 넘길 수 있습니다.</p>
+          <p class="sec_desc">두 프로젝트 모두 실제 브랜드 사이트를 분석해 기획, 디자인, 퍼블리싱까지 혼자 진행한 리디자인입니다. 화면 탭은 한 번 누르거나 Tab 키로 들어간 뒤, 키보드 ← → 키로도 넘길 수 있습니다.</p>
 
           <!-- ferm LIVING -->
           <article class="project" id="project_ferm" aria-labelledby="ferm_tit">
@@ -337,6 +337,7 @@ $origin.find(<span class="c_str">"label[for]"</span>).each(<span class="c_key">f
                 <button type="button" class="tab_btn" role="tab" id="ferm_tab_detail" aria-controls="ferm_panel_detail" aria-selected="false" tabindex="-1">상세</button>
                 <button type="button" class="tab_btn" role="tab" id="ferm_tab_checkout" aria-controls="ferm_panel_checkout" aria-selected="false" tabindex="-1">결제</button>
               </div>
+              <p class="tab_hint" aria-hidden="true">← → 키로 화면 넘기기</p>
 
               <div class="tab_panel" role="tabpanel" id="ferm_panel_main" aria-labelledby="ferm_tab_main" tabindex="0">
                 <figure class="device">
@@ -433,6 +434,7 @@ $origin.find(<span class="c_str">"label[for]"</span>).each(<span class="c_key">f
                 <button type="button" class="tab_btn" role="tab" id="ysl_tab_detail" aria-controls="ysl_panel_detail" aria-selected="false" tabindex="-1">상세</button>
                 <button type="button" class="tab_btn" role="tab" id="ysl_tab_checkout" aria-controls="ysl_panel_checkout" aria-selected="false" tabindex="-1">결제</button>
               </div>
+              <p class="tab_hint" aria-hidden="true">← → 키로 화면 넘기기</p>
 
               <div class="tab_panel" role="tabpanel" id="ysl_panel_main" aria-labelledby="ysl_tab_main" tabindex="0">
                 <figure class="device">
@@ -602,7 +604,7 @@ tabProduct(<span class="c_str">".myorderBox+div &gt; ul &gt; li"</span>,<span cl
             </li>
             <li class="step">
               <h3 class="step_tit"><span class="step_when">지금</span> 이 사이트</h3>
-              <p class="step_txt">jQuery 없이 JavaScript로 탭을 다시 만들었습니다. role과 aria-selected로 스크린리더에 상태를 알리고, ← → Home End 키로 이동할 수 있습니다. 위 프로젝트 화면 탭에서 직접 확인해 보세요.</p>
+              <p class="step_txt">jQuery 없이 JavaScript로 탭을 다시 만들었습니다. role과 aria-selected로 스크린리더에 상태를 알리고, 탭에 포커스가 있을 때만 ← → Home End 키로 이동합니다. 그 밖에서는 화살표 키가 원래대로 페이지를 스크롤합니다. 위 프로젝트 화면 탭에서 직접 확인해 보세요.</p>
             </li>
           </ol>
         </div>

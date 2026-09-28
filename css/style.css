@@ -1155,6 +1155,28 @@ html:not(.js) .render_bar {
   padding-top: 20px;
 }
 
+/* 탭에 포커스가 있을 때만 보이는 키보드 안내 (터치 화면인 모바일에서는 숨김) */
+.project_view {
+  position: relative;
+}
+
+.tab_hint {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  font-family: var(--f_mono);
+  font-size: var(--fs_label);
+  color: var(--c_ink_mute);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.tab_list:focus-within + .tab_hint {
+  opacity: 1;
+}
+
 /* PC 화면 위에 모바일 화면을 겹쳐 보여주는 기기 틀 */
 .device {
   position: relative;
@@ -1930,6 +1952,10 @@ html:not(.js) .render_bar {
 
   .project_meta {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .tab_hint {
+    display: block;
   }
 
   .project_detail {
